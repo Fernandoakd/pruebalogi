@@ -1810,6 +1810,35 @@ progress {
     overflow-x: auto;
   }
 }
+
+.form-inline {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  width: 100%;
+}
+.form-inline .input-group,
+.form-inline .custom-select {
+  width: auto;
+}
+
+.topbar .navbar-search {
+  width: 25rem;
+}
+
+.topbar .navbar-search input {
+  font-size: 0.85rem;
+  height: auto;
+}
+.topbar .btn-add button {
+  background: #C0BEFF;
+  color: #000;
+  cursor: pointer;
+  position: relative;
+  border-radius: 59px;
+  border-color:rgba(31, 30, 30, 0.452);
+}
+
 .form-label {
   margin-bottom: 0.5rem;
 }
@@ -1851,6 +1880,26 @@ progress {
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
   width: 100%;
 }
+.input-group-append {
+  display: flex;
+}
+.input-group-append .btn {
+  position: relative;
+  z-index: 2;
+}
+.input-group-append .btn:focus {
+  z-index: 3;
+}
+.input-group-append .btn + .btn,
+.input-group-append .btn + .input-group-text,
+.input-group-append .input-group-text + .input-group-text,
+.input-group-append .input-group-text + .btn {
+  margin-left: -1px;
+}
+.input-group-append {
+  margin-left: -1px;
+}
+
 @media (prefers-reduced-motion: reduce) {
   .form-control {
     transition: none;
@@ -3668,6 +3717,7 @@ fieldset:disabled .btn {
   justify-content: space-between;
   padding: 0.875rem 1.375rem;
   position: relative;
+  height: 80px;
 }
 .navbar > .container,
 .navbar > .container-fluid,
@@ -3722,6 +3772,22 @@ fieldset:disabled .btn {
   padding: 0.25rem 0.75rem;
   transition: box-shadow 0.15s ease-in-out;
 }
+.navbar-divider {
+  width: 0;
+  border-right: 1px solid #e3e6f0;
+  height: calc(4.375rem - 2rem);
+  margin: auto 1rem;
+}
+.nav-name{
+  font-family: Arimo;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 37px;
+  letter-spacing: 0.02em;
+  color: #333267;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);}
+
 @media (prefers-reduced-motion: reduce) {
   .navbar-toggler {
     transition: none;
@@ -10707,7 +10773,7 @@ body {
 a.sidebar-link {
   background: #333267;
   border-left: 3px solid transparent;
-  color: rgba(233, 236, 239, 0.5);
+  color: #C0BEFF;
   cursor: pointer;
   display: block;
   font-weight: 400;
@@ -10720,7 +10786,7 @@ a.sidebar-link {
 .sidebar-link svg,
 a.sidebar-link i,
 a.sidebar-link svg {
-  color: rgba(233, 236, 239, 0.5);
+  color: #C0BEFF;
   margin-right: 0.75rem;
 }
 .sidebar-link:focus {
@@ -10735,8 +10801,8 @@ a.sidebar-link svg {
 .sidebar-link:hover svg {
   color: rgba(233, 236, 239, 0.75);
 }
-.sidebar-item.active .sidebar-link:hover,
-.sidebar-item.active > .sidebar-link {
+.sidebar-item:active .sidebar-link:hover,
+.sidebar-item:active > .sidebar-link {
   background: linear-gradient(
     90deg,
     rgba(59, 125, 221, 0.1),
@@ -10746,10 +10812,10 @@ a.sidebar-link svg {
   border-left-color: #3b7ddd;
   color: #e9ecef;
 }
-.sidebar-item.active .sidebar-link:hover i,
-.sidebar-item.active .sidebar-link:hover svg,
-.sidebar-item.active > .sidebar-link i,
-.sidebar-item.active > .sidebar-link svg {
+.sidebar-item:active .sidebar-link:hover i,
+.sidebar-item:active .sidebar-link:hover svg,
+.sidebar-item:active > .sidebar-link i,
+.sidebar-item:active > .sidebar-link svg {
   color: #e9ecef;
 }
 .sidebar-brand {
