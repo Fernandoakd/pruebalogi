@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Formulario de Tarjeta de Crédito Dinámico</title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Lato|Liu+Jian+Mao+Cao&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/estilos.css">
+</head>
+<body>
+	<div class="contenedor">
+
+		<!-- Tarjeta -->
+		<section class="tarjeta" id="tarjeta">
+			<div class="delantera">
+				<div class="datos">
+					<div class="flexbox">
+						<div class="grupo" id="numero">
+							<p class="label">N° Licencia/ Licence N°</p>
+							<p class="numero">########</p>
+						</div>
+	
+						<div class="grupo" id="clase">
+							<p class="label">Clases/ Class</p>
+							<p class="clase">B1</p>
+						</div>
+					</div>
+					<div class="grupo" id="apellido">
+						<p class="label">Apellido/ Last Name</p>
+						<p class="apellido">GIMENEZ</p>
+					</div>
+					<div class="grupo" id="nombre">
+						<p class="label">Nombre/ First Name</p>
+						<p class="nombre">RAUL</p>
+					</div>
+					<div class="grupo" id="domicilio">
+						<p class="label">Domicilio/ Address</p>
+						<p class="domicilio"> BARRIO, CALLE NRO</p>
+					</div>
+					<div class="grupo" id="nacimiento">
+						<p class="label">fecha de Nac./ Date of birth</p>
+						<p class="nacimiento"> 28 NOV 1995</p>
+					</div>
+					<div class="flexbox">
+						<div class="grupo" id="otorgamiento">
+							<p class="label">Otorgamiento/ Date of issue</p>
+							<p class="otorgamiento">Jhon Doe</p>
+						</div>
+
+						<div class="grupo" id="expiracion">
+							<p class="label">Vencimiento/ Expires</p>
+							<p class="expiracion">4 FEB 2024</p>
+						</div>
+					</div>
+				</div>
+			</div>
+
+		</section>
+
+		<!-- Contenedor Boton Abrir Formulario -->
+		<div class="contenedor-btn">
+			<button class="btn-abrir-formulario" id="btn-abrir-formulario">
+				<i class="fas fa-plus"></i>
+			</button>
+		</div>
+
+		<!-- Formulario -->
+		<form action="" id="formulario-tarjeta" class="formulario-tarjeta">
+			<div class="grupo">
+				<label for="inputNumero">Número Tarjeta</label>
+				<input type="text" id="inputNumero" maxlength="19" autocomplete="off">
+			</div>
+			<div class="grupo">
+				<label for="inputNombre">Nombre</label>
+				<input type="text" id="inputNombre" maxlength="19" autocomplete="off">
+			</div>
+			<div class="flexbox">
+				<div class="grupo expira">
+					<label for="selectMes">Expiracion</label>
+					<div class="flexbox">
+						<div class="grupo-select">
+							<select name="mes" id="selectMes">
+								<option disabled selected>Mes</option>
+							</select>
+							<i class="fas fa-angle-down"></i>
+						</div>
+						<div class="grupo-select">
+							<select name="year" id="selectYear">
+								<option disabled selected>Año</option>
+							</select>
+							<i class="fas fa-angle-down"></i>
+						</div>
+					</div>
+				</div>
+
+				<div class="grupo ccv">
+					<label for="inputCCV">CCV</label>
+					<input type="text" id="inputCCV" maxlength="3">
+				</div>
+			</div>
+			<button type="submit" class="btn-enviar">Enviar</button>
+		</form>
+	</div>
+
+	<script src="https://kit.fontawesome.com/2c36e9b7b1.js" crossorigin="anonymous"></script>
+	<script src="js/main.js"></script>
+</body>
+</html>
